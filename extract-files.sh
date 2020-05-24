@@ -34,6 +34,14 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function blob_fixup {
+    case "$1" in
+        vendor/etc/init/hw/*.rc)
+            sed -i 's ${ro.vendor.rc} /vendor/etc/init/hw/ g' "$2"
+            ;;
+    esac
+}
+
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
