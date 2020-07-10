@@ -46,3 +46,11 @@ on property:sys.boot_completed=1
 service face_hal /system/bin/true
     oneshot
     disabled
+
+service aee_aedv /system/bin/true
+    oneshot
+    disabled
+
+service aee_aedv64 /system/bin/true
+    oneshot
+    disabled
