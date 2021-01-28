@@ -117,11 +117,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
-# Symbols
-PRODUCT_PACKAGES += \
-    libshim_showlogo \
-    libshim_vtservice
-
 # Telephony
 PRODUCT_BOOT_JARS += \
     ImsServiceBase \
