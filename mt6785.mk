@@ -142,10 +142,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
-# Vendor Services - DISABLED
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/placeholder:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/init/vendor.oppo.hardware.biometrics.face@1.0-service.rc
-
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
