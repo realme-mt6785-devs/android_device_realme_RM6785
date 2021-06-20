@@ -133,15 +133,19 @@ PRODUCT_PACKAGES += \
     libshim_showlogo \
     libshim_vtservice
 
-# Telephony Jars
+# Telephony
 PRODUCT_BOOT_JARS += \
+    ImsServiceBase \
     mediatek-common \
     mediatek-framework \
     mediatek-ims-base \
     mediatek-ims-common \
     mediatek-telecom-common \
     mediatek-telephony-base \
-    mediatek-telephony-common
+    mediatek-telephony-common \
+
+PRODUCT_PACKAGES += \
+    ImsServiceBase
 
 # Trust HAL
 PRODUCT_PACKAGES += \
