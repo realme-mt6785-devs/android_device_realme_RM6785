@@ -20,7 +20,9 @@ on post-fs-data
     # Services
     setprop init.svc.console stopped
 
-on boot
+on property:sys.boot_completed=1
+    # ZRAM
+    swapon_all /vendor/fstab.enableswap
 
     # Disable edge limit control interface
     write /proc/touchpanel/oplus_tp_limit_enable 0
@@ -30,10 +32,6 @@ on boot
 
     # OTG
     write /sys/class/power_supply/usb/otg_switch 1
-
-on property:sys.boot_completed=1
-    # ZRAM
-    swapon_all /vendor/fstab.enableswap
 
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
