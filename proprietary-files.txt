@@ -12,11 +12,6 @@ lib64/libaptXHD_encoder.so
 lib/libem_support_jni.so
 lib64/libem_support_jni.so
 
-# HotwordEnrollment
--my_product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4.apk:system_ext/priv-app/HotwordEnrollmentOKGoogleCORTEXM4/HotwordEnrollmentOKGoogleCORTEXM4.apk
--my_product/framework/com.android.hotwordenrollment.common.util.jar:system_ext/framework/com.android.hotwordenrollment.common.util.jar
-my_product/etc/permissions/com.android.hotwordenrollment.common.util.xml:system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-
 # IMS
 -framework/mediatek-common.jar
 -framework/mediatek-framework.jar
@@ -27,7 +22,7 @@ my_product/etc/permissions/com.android.hotwordenrollment.common.util.xml:system_
 -framework/mediatek-telephony-common.jar
 -priv-app/ImsService/ImsService.apk
 bin/vtservice
-etc/init/init.vtservice.rc
+# etc/init/init.vtservice.rc
 framework/mediatek-ims-extension-plugin.jar
 framework/mediatek-ims-legacy.jar
 lib/libcomutils.so
