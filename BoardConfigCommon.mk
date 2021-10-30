@@ -127,3 +127,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR := $(COMMON_PATH)/sepolicy/private
+
+# Wifi
+BOARD_WLAN_DEVICE := MediaTek

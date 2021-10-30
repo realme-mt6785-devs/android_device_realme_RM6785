@@ -258,6 +258,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay \
-    android.hardware.wifi@1.0-service-lazy \
-    libkeystore-engine-wifi-hidl:64 \
-    libkeystore-wifi-hidl
+    android.hardware.wifi@1.0-service

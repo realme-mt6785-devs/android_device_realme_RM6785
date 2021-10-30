@@ -1197,7 +1197,6 @@ vendor/etc/.tp/.thermal_policy_08
 vendor/etc/usb_audio_policy_configuration.xml
 vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-dsp-gpu.xml
-vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/etc/vintf/manifest/manifest_soter.xml
@@ -2515,7 +2514,6 @@ vendor/lib64/libvowp2training_alexa.vendor.so
 vendor/lib64/libvpu.so
 vendor/lib64/libwapi.so
 vendor/lib64/libWaterMark.so
-vendor/lib64/libwifi-hal.so
 vendor/lib64/libwifitest.so
 vendor/lib64/libwo.so
 vendor/lib64/libwpa_client.so
