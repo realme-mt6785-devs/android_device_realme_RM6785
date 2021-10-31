@@ -68,7 +68,6 @@ odm/bin/hw/vendor.oplus.hardware.stability.oplus_project@1.0-service
 odm/bin/hw/vendor.oplus.hardware.thermalmntcfg@1.0-service
 odm/bin/hw/vendor.oplus.hardware.touch@1.0-service
 odm/bin/hw/vendor-oplus-hardware-transmessage@1.0-service
-odm/bin/hw/vendor.oplus.hardware.wifi@1.1-service
 odm/bin/init.oppo.fingerprints.sh
 odm/bin/init.vendor.wifi.autochmod.sh
 odm/bin/iwpriv_vendor
@@ -216,7 +215,6 @@ odm/etc/init/vendor.oplus.hardware.stability.oplus_project@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.thermalmntcfg@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.touch@1.0-service.rc
 odm/etc/init/vendor-oplus-hardware-transmessage@1.0-service.rc
-odm/etc/init/vendor.oplus.hardware.wifi@1.1-service.rc
 odm/etc/jdi_nt_nt36672c_dsjm_eyeprotect_data.xml
 odm/etc/media_codecs_ffmpeg.xml
 odm/etc/media_codecs_mediatek_odm.xml
@@ -248,7 +246,6 @@ odm/etc/vintf/manifest/manifest_oplus_stability_project.xml
 odm/etc/vintf/manifest/manifest_oplus_thermalmntcfg.xml
 odm/etc/vintf/manifest/manifest_oplus_touch.xml
 odm/etc/vintf/manifest/manifest_transmessage.xml
-odm/etc/vintf/manifest/oplus_wifi_service_device.xml
 odm/etc/wifi/txpowerctrl.cfg
 odm/firmware/aw87339/aw87339_abrcv.bin
 odm/firmware/aw87339/aw87339_drcv.bin
@@ -369,8 +366,6 @@ odm/lib64/vendor.oplus.hardware.stability.oplus_project@1.0.so
 odm/lib64/vendor.oplus.hardware.thermalmntcfg@1.0.so
 odm/lib64/vendor.oplus.hardware.touch@1.0.so
 odm/lib64/vendor.oplus.hardware.transmessage@1.0.so
-odm/lib64/vendor.oplus.hardware.wifi@1.1.so
-odm/lib64/vendor.oplus.hardware.wifi.supplicant@2.0.so
 odm/lib/anc.hal.so
 odm/lib/hw/fingerprint.goodix_G2.default.so
 odm/lib/hw/fingerprint.goodix_G3.default.so
@@ -432,8 +427,6 @@ odm/lib/vendor.oplus.hardware.stability.oplus_project@1.0.so
 odm/lib/vendor.oplus.hardware.thermalmntcfg@1.0.so
 odm/lib/vendor.oplus.hardware.touch@1.0.so
 odm/lib/vendor.oplus.hardware.transmessage@1.0.so
-odm/lib/vendor.oplus.hardware.wifi@1.1.so
-odm/lib/vendor.oplus.hardware.wifi.supplicant@2.0.so
 odm/vendor/app/mcRegistry/030b0000000000000000000000000000.drbin
 odm/vendor/app/mcRegistry/030b0000000000000000000000000000.tlbin
 odm/vendor/app/mcRegistry/030c0000000000000000000000000000.drbin
@@ -1211,7 +1204,6 @@ vendor/etc/vintf/manifest/manifest_soter.xml
 vendor/etc/vintf/manifest/manifest.xml
 vendor/etc/vintf/manifest/oplus_appradio_device_manifest.xml
 vendor/etc/vintf/manifest/oplus_radio_device_manifest.xml
-vendor/etc/vintf/manifest/oplus_wifi_supplicant_device.xml
 vendor/etc/vintf/manifest/power-default.xml
 vendor/etc/vintf/manifest/vendor.mediatek.hardware.dplanner@2.0-service.xml
 vendor/etc/vintf/manifest/vibrator-mtk-default.xml
@@ -2606,7 +2598,6 @@ vendor/lib64/vendor.mediatek.hardware.wifi.hostapd@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.2.so
-vendor/lib64/vendor.oplus.hardware.wifi.supplicant@2.0.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
