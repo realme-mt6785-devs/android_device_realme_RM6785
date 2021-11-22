@@ -23,10 +23,10 @@ on post-fs-data
 on boot
 
     # Disable edge limit control interface
-    write /proc/touchpanel/oppo_tp_limit_enable 0
+    write /proc/touchpanel/oplus_tp_limit_enable 0
 
     # Enable oppo touchpanel direction
-    write /proc/touchpanel/oppo_tp_direction 1
+    write /proc/touchpanel/oplus_tp_direction 1
 
     # OTG
     write /sys/class/power_supply/usb/otg_switch 1
