@@ -19,7 +19,7 @@ on post-fs-data
 
 on property:sys.boot_completed=1
     # ZRAM
-    swapon_all /vendor/fstab.enableswap
+    swapon_all /vendor/etc/fstab.mt6785
 
     # Disable edge limit control interface
     write /proc/touchpanel/oplus_tp_limit_enable 0
