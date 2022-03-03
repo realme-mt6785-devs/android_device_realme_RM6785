@@ -68,6 +68,10 @@ odm/etc/nfc/libnfc-nxp.conf_19661:vendor/etc/libnfc-nxp.conf
 -odm/lib/libsn100u_fw.so
 -odm/lib64/libpnscr2.so
 
+# Sensors
+-odm/lib/sensors.virtual.so
+-odm/lib64/sensors.virtual.so
+
 # ODM
 -odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/etc/audio/audio_device/audio_device.xml
