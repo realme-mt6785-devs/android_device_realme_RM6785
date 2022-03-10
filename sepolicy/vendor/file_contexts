@@ -13,3 +13,6 @@
 
 # Persist files
 /mnt/vendor/persist/camera(/.*)? u:object_r:vendor_persist_camera_file:s0
+
+# Goodix Fingerprint data
+/data/vendor/fingerprint/gf_data(/.*)? u:object_r:fingerprint_vendor_data_file:s0
