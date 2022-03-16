@@ -67,7 +67,7 @@
     <bool name="config_useDevInputEventForAudioJack">true</bool>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">115.0px</dimen>
+    <dimen name="status_bar_height">115.0px</dimen>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
