@@ -122,6 +122,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.target.rc \
     fstab.mt6785 \
+    ueventd.oplus.rc
 
 # Keymaster
 PRODUCT_PACKAGES += \
