@@ -124,8 +124,15 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.target.rc \
     fstab.mt6785 \
+    init_connectivity.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.project.rc \
+    init.target.rc \
+    init.mt6785.rc \
+    init.sensor_1_0.rc \
+    ueventd.mtk.rc \
     ueventd.oplus.rc
 
 # Keymaster
