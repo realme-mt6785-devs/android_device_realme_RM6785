@@ -75,6 +75,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Doze
+PRODUCT_PACKAGES += \
+    OplusDoze
+
 # DT2W
 PRODUCT_PACKAGES += \
     DT2W-Service-RM6785
