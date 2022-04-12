@@ -3,20 +3,7 @@
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6785.usb.rc
 import /vendor/etc/init/hw/init.project.rc
-import /system/etc/init/hw/init.aee.rc
-import /FWUpgradeInit.rc
-import /vendor/etc/init/hw/init.aee.rc
-import /vendor/etc/init/hw/init.volte.rc
-import /vendor/etc/init/hw/init.mal.rc
 import /vendor/etc/init/hw/init.sensor_1_0.rc
-import /vendor/etc/init/hw/init.stnfc.rc
-import /system/etc/init/hw/init.stnfc.rc
-#ifdef VENDOR_EDIT
-#Long.Liu@BSP.Fingerprint.Basic 2018/10/16 Add for fingerprint
-import /init.oppo.fingerprints.rc
-import /init.oppo.face.rc
-import /init.oppo.seccommon.rc
-#endif
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import /vendor/etc/init/hw/init.modem.rc
@@ -105,16 +92,6 @@ on charger
     start light-hal-2-0
     start health-hal-2-0
 
-#ifdef VENDOR_EDIT
-#huacai.zhou@bsp.drv modify for setting zram size according to totalram size
-service swap_enable_init /system/bin/sh /system/etc/swap_enable.sh
-     user root
-     disabled
-     oneshot
-     seclabel u:r:rutilsdaemon:s0
-#endif
-
-
 on fs
     write /proc/bootprof "INIT:Mount_START"
     write /sys/kernel/debug/tracing/trace_marker "B|1|Mount"
@@ -132,16 +109,8 @@ on fs
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 100
     write /sys/kernel/mm/swap/vma_ra_enabled false
-#ifdef VENDOR_EDIT
-#huacai.zhou@bsp.drv modify for setting zram size according to totalram size
-     chmod +x /system/etc/swap_enable.sh
-     start swap_enable_init
-#else
-     #swapon_all /vendor/fstab.enableswap
-#endif
 
 on fs
-
    mount iso9660 loop@/vendor/etc/iAmCdRom.iso /mnt/cd-rom ro
 
 on post-fs
@@ -924,21 +893,6 @@ on boot
     chmod 660 /dev/ttyGS1
     chown system radio /dev/ttyGS1
 
-#ifdef VENDOR_EDIT
-#Zuofa.Liu@PSW.CN.WiFi.Basic, 2019/07/04
-#Add for wifi sar setting on Android P
-service wifisar_realme /system/vendor/bin/wifisar_realme
-    class main
-    user root
-    group root
-    disabled
-    oneshot
-
-# Any property change trigger wifisar setting
-on property:odm.wifi.sar.idx=*
-    start wifisar_realme
-#endif /* VENDOT_EDIT */
-
 on property:vold.decrypt=trigger_reset_main
     write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
     setprop sys.boot_completed 0
@@ -949,19 +903,11 @@ on property:vold.decrypt=trigger_post_fs_data
 
 on property:vold.decrypt=trigger_restart_min_framework
     write /proc/bootprof "INIT:vold.decrypt=trigger_restart_min_framework"
-# ifdef VENDOR_EDIT
-# Tong.Han@PSW.Bsp.Tp, 2018/01/31, Add to aceess data fw files
-    start bspFwUpdate
-#endif
     start nvram_daemon
     start msensord
 
 on property:vold.decrypt=trigger_restart_framework
     write /proc/bootprof "INIT:vold.decrypt=trigger_restart_framework"
-# ifdef VENDOR_EDIT
-# Tong.Han@PSW.Bsp.Tp, 2018/01/31, Add to aceess data fw files
-    start bspFwUpdate
-#endif
     start nvram_daemon
     start msensord
 
@@ -1032,73 +978,6 @@ on property:sys.boot_completed=1
     # switch to sched-dvfs
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedplus"
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedplus"
-#ifdef VENDOR_EDIT
-#Qiang.shao@PSW.AD.OppoFeature.CommonSoft.1181235, 2016/07/30, Add for self_init domain to access block_device for init prop
-service prop-adap-core /vendor/bin/self-init core
-    class core
-    user root
-    oneshot
-    seclabel u:r:rutilsdaemon:s0
-service prop-adap-main /vendor/bin/self-init main
-    class main
-    user root
-    oneshot
-    seclabel u:r:rutilsdaemon:s0
-service media-resource-reconciliation /vendor/bin/self-init reconcile_media_resource
-    user root
-    oneshot
-    disabled
-    seclabel u:r:rutilsdaemon:s0
-service prop-adap-core-gsi /vendor/bin/self-init gsicore
-    class core
-    user root
-    group root system radio
-    oneshot
-
-service prop-adap-main-gsi /vendor/bin/self-init gsimain
-    class main
-    user root
-    group root system radio
-    oneshot
-
-
-on property:ro.oppo.reconcile_media_resource=1
-    start media-resource-reconciliation
-#endif
-
-#service dpfd /vendor/bin/dpfd
-#	user root
-#	group system media
-
-#
-#  External Modme control related services
-#
-
-#
-#  Modem related services (Begin)
-#
-##Add by T.Zh for ppp daemon
-#service pppd /system/bin/pppd file /data/misc/ppp/ppp_options
-#    user root
-#    disabled
-#    oneshot
-#
-##
-#
-#  Modem related services (End)
-#
-
-#add for power-off alarm
-#service poad /vendor/bin/poad
-#    class main
-#    user system
-#    group system
-#    oneshot
-
-#service BGW /vendor/xbin/BGW
-#	user system
-#	group gps system radio
-#	class main
 
 # Battery info
 on property:persist.vendor.mediatek.fg.disable=1
@@ -1118,22 +997,6 @@ on property:persist.vendor.mediatek.fg.log.enable=1
     write /sys/bus/platform/devices/battery/FG_daemon_log_level 7
     write /proc/sys/kernel/printk 8
 
-# add loghidl client
-service loghidlsysservice /system/bin/loghidlsysservice
-    class main
-    user root
-    group system
-    disabled
-
-# add meta_tst for ATM
-service meta_tst /vendor/bin/meta_tst
-    class main
-    user system
-    group radio gps system wifi audio bluetooth media
-    capabilities NET_RAW NET_ADMIN
-    disabled
-    oneshot
-
 # start meta_tst for ATM
 on property:sys.boot_completed=1 && property:ro.boot.atm=enable
     start meta_tst
@@ -1143,31 +1006,3 @@ on property:sys.boot_completed=1 && property:ro.boot.atm=enable
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
-
-# FPSGO FBT Game
-on boot
-    insmod /vendor/lib/modules/fpsgo.ko
-
-# VSIM service (vendor OSI)
-service osi /system/bin/osi
-    class main
-    user root
-    disabled
-    oneshot
-    #seclabel u:r:osi:s0
-
-#ifdef VENDOR_EDIT
-#Yadong.Hu@PSW.CN.WiFi.Connect.associated.1065680, 2017/08/15,
-#add for key log
-on property:debug.wifi.prdebug=1
-    write /sys/kernel/debug/dynamic_debug/control "module wlan_drv_gen4m +p"
-on property:debug.wifi.prdebug=0
-    write /sys/kernel/debug/dynamic_debug/control "module wlan_drv_gen4m -p"
-#endif /* VENDOR_EDIT */
-#ifdef VENDOR_EDIT
-#Haiping.Zhong@PSW.AD.CTS.2501811, 2019/11/15, Add for gsi CtsOsTestCases
-on property:ro.vendor.gsi.build.flavor=*
-    restorecon /dev/loop-control
-#endif
-
-
