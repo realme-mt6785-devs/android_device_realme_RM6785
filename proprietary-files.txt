@@ -1649,13 +1649,11 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 -vendor/lib64/libwvhidl.so
 -vendor/lib64/mediadrm/libwvdrmengine.so
 
-# Fingerprint
--odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
-odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
--odm/lib/vendor.oplus.hardware.biometrics.fingerprint@2.1.so;MODULE=vendor.oplus.hardware.biometrics.fingerprint@2.1.odm
--odm/lib/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so
--odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so;MODULE=vendor.oplus.hardware.biometrics.fingerprint@2.1.odm
--odm/lib64/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so
+# Fingerprint - from RMX2151_11_F.01
+-odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service|5ee32745fd0ce6fe355e7107af44d5a531c07176
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc|11b728dc6dd93480b8f8aebd8c639589ec143ad5
+odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml|78ca4f56ed1f5dd48c186718718fd9513629851e
+-odm/lib64/anc.hal.so|33c64a1e8da42916322a75ef36fa428c3539ab2a
 
 # Firmware audio
 odm/firmware/aw87339/aw87339_abrcv.bin
