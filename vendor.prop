@@ -88,6 +88,15 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.set_idle_timer_ms=250
 ro.surface_flinger.set_touch_timer_ms=300
 ro.vendor.mtk_hdr_video_support=1
+debug.composition.type=gpu
+debug.composition.type=c2d
+debug.egl.hw=1
+debug.egl.profiler=1
+debug.performance.tuning=1
+vendor.display.disable_skip_validate=1
+vendor.perf.gestureflingboost.enable=true
+vendor.display.enable_optimize_refresh=1
+
 
 # Incremental
 ro.incremental.enable=yes
