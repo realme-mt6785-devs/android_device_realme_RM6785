@@ -205,3 +205,16 @@ wifi.concurrent.interface=ap0
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
 ro.zram.periodic_wb_delay_hours=24
+
+#Disable Some More Logging
+logcat.live=disable
+debugtool.anrhistory=0 
+ro.config.htc.nocheckin=1 
+ro.config.nocheckin=1
+rofiler.debugmonitor=false 
+profiler.launch=false 
+profiler.hung.dumpdobugreport=false
+ro.kernel.checkjni=0
+ro.kernel.android.checkjni=0
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
