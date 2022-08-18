@@ -114,6 +114,9 @@
         <data cmd="PERF_RES_POWERHAL_SCREEN_OFF_STATE" param1="2"></data>
         <data cmd="PERF_RES_DRAM_CM_MGR" param1="1"></data>
         <data cmd="PERF_RES_FPS_FPSGO_GPU_BLOCK_BOOST" param1="110"></data> 
-        <data cmd="PERF_RES_FPS_FBT_BOOST_TA" param1="1"></data>    
+        <data cmd="PERF_RES_FPS_FBT_BOOST_TA" param1="1"></data> 
+        <data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_OPP" param1="3"></data> 
+        <data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_ACTIVE_TIME" param1="220000"></data> 	
+		<data cmd="PERF_RES_NET_NETD_BOOST_UID" param1="1"></data>
     </scenario>
 </SCNTABLE>
