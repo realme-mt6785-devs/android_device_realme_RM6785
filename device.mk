@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor:64
 
 PRODUCT_PACKAGES += \
+    libshim_audio \
     libshim_camera_metadata \
     libshim_mtkcam
 
@@ -333,7 +334,6 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libmedia_helper-v30 \
     libutils-v32 \
     libui-v32
 
