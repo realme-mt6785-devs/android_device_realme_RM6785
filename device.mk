@@ -11,6 +11,7 @@ $(call inherit-product, vendor/realme/RM6785/RM6785-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Shipping API
+BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic Partition
