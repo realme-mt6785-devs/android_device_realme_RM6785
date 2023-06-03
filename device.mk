@@ -150,6 +150,10 @@ $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
     $(LOCAL_PATH)/configs/linker.config.json
 
+# Logging
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.logd.kernel=false
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
