@@ -1115,6 +1115,9 @@ odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
 -odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so;MODULE=vendor.oplus.hardware.biometrics.fingerprint@2.1.odm
 -odm/lib64/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so
 
+# FM Radio - from GS5-user 12 SP1A.210812.016 1685498763 release-keys
+-system_ext/lib64/libfmjni.so:system/lib64/libfmjni.so|a6561d433863b48d7745fb0fb6b6efa3d0b92414
+
 # FM (Firmware)
 vendor/firmware/fm_cust.cfg
 vendor/firmware/mt6631_fm_v1_coeff.bin

@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     libdrm.vendor \
     libmockdrmcryptoplugin
 
+# FM Radio
+PRODUCT_PACKAGES += \
+    FMRadio
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
