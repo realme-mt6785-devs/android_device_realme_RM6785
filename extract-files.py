@@ -21,6 +21,7 @@ namespace_imports = [
     'device/realme/RM6785',
 	'hardware/mediatek',
 	'hardware/mediatek/libmtkperf_client',
+	'hardware/mediatek/libaedv',
 ]
 
 
