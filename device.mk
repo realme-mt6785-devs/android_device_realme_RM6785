@@ -77,10 +77,6 @@ PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
-# Fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.RM6785
