@@ -23,6 +23,19 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
 
+
+PRODUCT_PACKAGES += \
+    oplus-framework \
+    main-framework \
+    coloros-support-wrapper
+
+
+PRODUCT_BOOT_JARS += \
+    oplus-framework \
+    main-framework \
+    coloros-support-wrapper     
+
+
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.0-impl:32 \
@@ -33,6 +46,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default:32 \
     audio.usb.default:32 \
     libldacBT_bco
+
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -214,6 +228,7 @@ PRODUCT_ENFORCE_RRO_TARGETS += *
 
 # Permissions
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-oppocam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-oppocam.xml \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml \
     $(LOCAL_PATH)/configs/permissions/mediatek-common.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-common.xml \
     $(LOCAL_PATH)/configs/permissions/mediatek-framework.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-framework.xml \

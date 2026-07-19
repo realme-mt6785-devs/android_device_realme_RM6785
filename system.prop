@@ -13,3 +13,13 @@ persist.dbg.volte_avail_ovr=1
 # LMKD
 ro.config.low_ram=false
 ro.lmk.log_stats=true
+
+# Camera
+ro.camera.hfr.enable=1
+ro.camera.high.resolution.video.filter.enable=1
+ro.camera.portrait.blur.level.enable=1
+ro.camera.videoeis.enable=1
+ro.mtk_cam_dualzoom_support=1
+ro.mtk_cam_stereo_camera_support=1
+ro.oplus.system.camera.name=com.oppo.camera
+ro.vendor.mtk_camera_app_version=3
