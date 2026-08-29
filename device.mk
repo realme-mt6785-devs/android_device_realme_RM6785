@@ -132,7 +132,6 @@ $(call soong_config_set_bool,libion,legacy_impl,true)
 
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
-PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Keymaster
