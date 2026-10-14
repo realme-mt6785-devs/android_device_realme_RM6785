@@ -13,7 +13,9 @@ on fs
 on post-fs-data
     # VideoCodec
     chmod 0666 /dev/video0
-    chmod 0666 /dev/video1
+    chmod 0666 /dev/
+    chmod 0666 /dev/video2
+    chown mediacodec system /dev/video2
 
     # AudioDump
     mkdir /data/vendor/audiohal 0771 system audio
@@ -106,3 +108,4 @@ on property:ro.vendor.device=*
 on property:sys.boot_completed=1
     # Only owner can acces this node
     chmod 440 /proc/net/unix
+    restart android-hardware-media-c2-hal-1-2
