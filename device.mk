@@ -371,14 +371,15 @@ PRODUCT_PACKAGES += \
     libbase_shim
 
 # Wi-Fi
-$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
-
 PRODUCT_PACKAGES += \
     hostapd \
     wlan_assistant \
-    libwifi-hal-wrapper \
+    libwifi-hal-mediatek \
     wpa_supplicant \
     android.hardware.wifi-service
+
+PRODUCT_PACKAGES += \
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/txpowerctrl.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrl.cfg \
